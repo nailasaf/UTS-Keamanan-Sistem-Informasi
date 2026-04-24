@@ -744,9 +744,19 @@
           }
         ],
         "description": "Model ancaman akses ruang server"
+      },
+      {
+        "id": 1,
+        "title": "DFD KSI",
+        "diagramType": "STRIDE",
+        "placeholder": "Deskripsi diagram STRIDE baru",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.0",
+        "cells": [],
+        "description": "Model ancaman akses ruang server"
       }
     ],
-    "diagramTop": 1,
+    "diagramTop": 2,
     "reviewer": "",
     "threatTop": 5
   }
