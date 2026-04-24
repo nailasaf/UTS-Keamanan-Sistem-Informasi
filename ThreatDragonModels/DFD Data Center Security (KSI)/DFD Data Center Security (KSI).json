@@ -19,6 +19,36 @@
         "cells": [
           {
             "position": {
+              "x": 341.9999999999984,
+              "y": 35.000000000003894
+            },
+            "size": {
+              "width": 570,
+              "height": 440
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "6860d1db-c7c3-451f-8ac5-6ba5802a1a90",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Batas Kepercayaan",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "20698f0c-71bd-4fa3-9b10-5b1156f6572e",
+                "c4a5ac07-a5bd-4b07-ada0-ebbf76d236b5"
+              ],
+              "containedElements": [
+                "f7d1c7ab-6ee5-468a-b931-030e36575522",
+                "41919cf0-de40-496e-b845-067506257f0e",
+                "77d89bb4-06ca-482f-8bfb-18c2cb6c92a2"
+              ]
+            }
+          },
+          {
+            "position": {
               "x": 430,
               "y": 95
             },
@@ -38,6 +68,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +152,6 @@
               ]
             },
             "id": "f7d1c7ab-6ee5-468a-b931-030e36575522",
-            "zIndex": 1,
             "data": {
               "type": "tm.Process",
               "name": "Pintu Akses \nRuang Server\n",
@@ -158,6 +188,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -241,7 +272,6 @@
               ]
             },
             "id": "f8cdd2eb-f6d5-4c36-a95f-cc6d32e0af6e",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Petugas Kebersihan\n",
@@ -275,6 +305,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -358,7 +389,6 @@
               ]
             },
             "id": "41919cf0-de40-496e-b845-067506257f0e",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "Sistem \nMonitoring\n",
@@ -398,6 +428,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -481,7 +512,6 @@
               ]
             },
             "id": "77d89bb4-06ca-482f-8bfb-18c2cb6c92a2",
-            "zIndex": 4,
             "data": {
               "type": "tm.Store",
               "name": "Server\n",
@@ -529,7 +559,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "6860d1db-c7c3-451f-8ac5-6ba5802a1a90"
+              ]
             },
             "labels": [
               "Akses RFID"
@@ -543,6 +575,73 @@
               "cell": "f7d1c7ab-6ee5-468a-b931-030e36575522",
               "port": "f6f8c1a4-45dd-429f-af87-591d923b1a4a"
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Akses Server\n",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "3e74930e-b0d1-48ad-8e75-9050adc0c700",
+                  "title": "Tampering pada Server",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "USB berisi malware dimasukkan ke dalam server sehingga data dapat dimodifikasi, dirusak, atau sistem terganggu.",
+                  "mitigation": "Menonaktifkan port USB pada server, menerapkan kontrol akses fisik yang ketat, serta menggunakan antivirus dan sistem deteksi malware untuk mencegah serangan.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Akses Server"
+            ],
+            "id": "67c56f71-fd39-4b0d-9165-8c3b6bd3b290",
+            "source": {
+              "cell": "f7d1c7ab-6ee5-468a-b931-030e36575522",
+              "port": "8d0b0e03-2e4c-4a4e-8cdb-22f772b86a17"
+            },
+            "target": {
+              "cell": "77d89bb4-06ca-482f-8bfb-18c2cb6c92a2",
+              "port": "47101073-3e64-491a-b127-f410ba711b62"
+            },
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -564,7 +663,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Aliran Data",
+              "name": "Log Aktivitas\n",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -575,21 +674,22 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "6860d1db-c7c3-451f-8ac5-6ba5802a1a90"
+              ]
             },
             "labels": [
-              "Aliran Data"
+              "Log Aktivitas"
             ],
-            "id": "67c56f71-fd39-4b0d-9165-8c3b6bd3b290",
+            "id": "c4a5ac07-a5bd-4b07-ada0-ebbf76d236b5",
             "source": {
-              "cell": "f7d1c7ab-6ee5-468a-b931-030e36575522",
-              "port": "8d0b0e03-2e4c-4a4e-8cdb-22f772b86a17"
+              "x": 500,
+              "y": 195
             },
             "target": {
-              "cell": "77d89bb4-06ca-482f-8bfb-18c2cb6c92a2",
-              "port": "47101073-3e64-491a-b127-f410ba711b62"
-            },
-            "vertices": []
+              "cell": "41919cf0-de40-496e-b845-067506257f0e",
+              "port": "a987fc8e-0e62-4af7-a7fd-e7a5e9f57807"
+            }
           }
         ],
         "description": "Model ancaman akses ruang server"
@@ -597,6 +697,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 1
   }
 }
