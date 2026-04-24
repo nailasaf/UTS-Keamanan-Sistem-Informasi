@@ -19,8 +19,8 @@
         "cells": [
           {
             "position": {
-              "x": 341.9999999999984,
-              "y": 35.000000000003894
+              "x": 360,
+              "y": 40
             },
             "size": {
               "width": 570,
@@ -48,8 +48,6 @@
             },
             "tools": {
               "items": [
-                "boundary",
-                "button-remove",
                 "boundary",
                 "button-remove"
               ],
