@@ -28,8 +28,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "6860d1db-c7c3-451f-8ac5-6ba5802a1a90",
             "zIndex": -1,
+            "id": "6860d1db-c7c3-451f-8ac5-6ba5802a1a90",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Batas Kepercayaan",
@@ -45,6 +45,15 @@
                 "41919cf0-de40-496e-b845-067506257f0e",
                 "77d89bb4-06ca-482f-8bfb-18c2cb6c92a2"
               ]
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -580,6 +589,54 @@
             "shape": "flow",
             "attrs": {
               "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Log Aktivitas\n",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "6860d1db-c7c3-451f-8ac5-6ba5802a1a90"
+              ]
+            },
+            "labels": [
+              "Log Aktivitas"
+            ],
+            "id": "c4a5ac07-a5bd-4b07-ada0-ebbf76d236b5",
+            "source": {
+              "x": 500,
+              "y": 195
+            },
+            "target": {
+              "cell": "41919cf0-de40-496e-b845-067506257f0e",
+              "port": "a987fc8e-0e62-4af7-a7fd-e7a5e9f57807"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
                 "stroke": "red",
                 "strokeWidth": 2.5,
                 "targetMarker": {
@@ -642,54 +699,6 @@
               "port": "47101073-3e64-491a-b127-f410ba711b62"
             },
             "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Log Aktivitas\n",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "6860d1db-c7c3-451f-8ac5-6ba5802a1a90"
-              ]
-            },
-            "labels": [
-              "Log Aktivitas"
-            ],
-            "id": "c4a5ac07-a5bd-4b07-ada0-ebbf76d236b5",
-            "source": {
-              "x": 500,
-              "y": 195
-            },
-            "target": {
-              "cell": "41919cf0-de40-496e-b845-067506257f0e",
-              "port": "a987fc8e-0e62-4af7-a7fd-e7a5e9f57807"
-            }
           }
         ],
         "description": "Model ancaman akses ruang server"
